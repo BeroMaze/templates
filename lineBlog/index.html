@@ -3,49 +3,60 @@
   <head>
     <title>Line Style Blog</title>
     <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel:700|Sansita+One|Indie+Flower|VT323' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="./animate.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./media.css" media="screen" title="no title" charset="utf-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
     <script id='articleTemplate' type='text/template'>
-      <article id="{{id}}" class='articles'>
+      <article id="{{id}}" class='articles dragend-page'>
         <div class='front'>
           <div class=articleLeft>
-            <h2 class='ArticleTitle'>{{title}}</h2>
+            <h2 class='articleTitle'>{{title}}</h2>
             <p class='published'>Published: {{daysAgo}} days ago</p>
-            <p class='miniDesc'>{{miniDescription}}</p>
+            <p class='miniDesc'>{{{miniDescription}}}</p>
+            <img src='./img/swiper.png' id='info'>
           </div>
           <div class='articleRight'>
-            <p class='before'>Previous Article</p>
             <img src='{{img}}' class='articleImg' />
-            <p class='next'>Next Article</p>
+            <img class='readOnArrow' src='./img/readOn.png'>
           </div>
-          <div class='readOnBox'><a class='readOn'>R<br>e<br>a<br>d<br> <br>O<br>n<br></a></div>
         </div>
         <div class='back'>
-          <div class='headBackBox'><a class='headBack'>H<br>e<br>a<br>d<br> <br>B<br>a<br>c<br>k<br></a></div>
           <div class='fullView'>
-            <h2 class='ArticleTitleBack'>{{title}}</h2>
+            <h2 class='articleTitleBack'>{{title}}</h2>
             <p class='publishedBack'>Published: {{daysAgo}} days ago</p>
-            <p class='body'>{{body}}</p>
+            <img class='headBackArrow' src='./img/headBack.png'>
+            <p class='body'>{{{body}}}</p>
           </div>
         </div>
       </article>
     </script>
+    <script id='aboutTemplate' type='text/template'>
+      <div id='aboutPage'>
+        <div class='aboutTop'><p class='aboutText aboutTextImg'>{{{aboutTop}}}</p></div>
+        <div class='aboutMiddle'><div class='aMidLeft'><p class='aboutText'>{{{aboutMiddleLeft}}}</p></div>
+          <div class='aMidRight'><p class='aboutText'>{{{aboutMiddleRight}}}</p></div></div>
+        <div class='aboutBottom'><p class='aboutText aboutTextImg'>{{{aboutBottom}}}</p></div>
+      </div>
+    </script>
   </head>
   <body>
     <header class='slideInLeft animated'>
-    <h1>Title Of Blog</h1>
-     <ul id='nav'>
-       <li class='navList' id='stories'>Stories</li>
-       <li class='navList' id='search'>Search</li>
-       <li class='navList' id='about'>About</li>
-       <li class='navList' id='contact'>Contact Me</li>
-       <li class='navList' id='ThankYou'>Thank You</li>
-     </ul>
+      <h1>Dreefter Code</h1>
+      <ul id='nav'>
+        <li class='navList' id='stories'>Stories</li>
+        <li class='navList' id='search'>Search</li>
+        <li class='navList' id='about'>About</li>
+        <li class='navList' id='contact'>Contact Me</li>
+        <li class='navList' id='ThankYou'>Thank You</li>
+      </ul>
     </header>
     <main class='zoomIn animated'>
+      <div id='searchFind'>
 
+      </div>
     </main>
     <footer class='slideInLeft animated'>
       <div id='created'>
@@ -55,15 +66,17 @@
       </div>
       <div id='media'>
         <h3>Find Me On:</h3>
-        <img src='./linkedIn.png' id='linkedIn' class='mediaPics'/>
-        <img src='./google.png' id='google' class='mediaPics'/>
-        <img src='./facebook.png' id='facebook' class='mediaPics'/>
-        <img src='./twitter.png' id='twitter' class='mediaPics'/>
+        <img src='./img/linkedIn.png' id='linkedIn' class='mediaPics'/>
+        <img src='./img/google.png' id='google' class='mediaPics'/>
+        <img src='./img/facebook.png' id='facebook' class='mediaPics'/>
+        <img src='./img/twitter.png' id='twitter' class='mediaPics'/>
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"> </script>
-    <script type="text/javascript" src='./objects.js'></script>
-    <script type="text/javascript" src='./script.js'></script>
-    <script type="text/javascript" src='./events.js'></script>
+    <script src='./dragend/dragend.js'></script>
+    <script src='./objects.js'></script>
+    <script src='./script.js'></script>
+    <script src='./events.js'></script>
+
   </body>
 </html>
