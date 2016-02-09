@@ -165,7 +165,7 @@ main{
   cursor: pointer;
 }
 .readOnArrow{
-  width: 25%;
+  width: 100px;
   display: -webkit-flex;
   display: -moz-flex;
   display: flex;
@@ -470,4 +470,11 @@ input{
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   background-color: rgb(72, 17, 135);
+}
+#info{
+  margin-bottom: 0;
+  -webkit-align-self: center;
+  height: 50px;
+  width: 300px;
+  opacity: .4;
 }

@@ -220,26 +220,24 @@ function events() {
 }
 events();
 
+var onPage = 1;
 $(window).scroll(function() {
   var move = $(window).scrollLeft();
-  var page;
-  if (move === 5) {
-    page = $('.articles').attr('id');
-    var next = Number(page) + 1;
-    console.log(page);
+    // var onPage = $('main').children().children(':nth-child(2)');
+  // page = Number($('.articles').attr('id'));
+  if (move === 6) {
+    onPage += 1;
     $("main").dragend({
-    scrollToPage: next
-  });
+      scrollToPage: onPage
+    });
     move = 0;
     console.log(next);
   }
-  else if(move === (-5)){
-    page = $('.articles').attr('id');
-    console.log(page);
+  else if(move === (-6)){
+    onPage -= 1;
     $("main").dragend({
-    scrollToPage: page -= 1
-  });
+      scrollToPage: onPage
+    });
     move = 0;
-    console.log(page);
   }
 });

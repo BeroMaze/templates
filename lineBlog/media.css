@@ -2,7 +2,7 @@
   h1{
     font-size: 1.4em;
     margin-left: 1%;
-  }
+}
   .navList{
     font-size: .7em;
   }
@@ -358,11 +358,7 @@
    height: auto;
    width: 100%;
   }
-  body{
-    padding: 0;
-    margin: 0;
-    height: auto;
-  }
+
   .articleLeft{
     justify-content: center;
     -webkit-justify-content: center;
@@ -394,9 +390,12 @@
   }
   .eachCategory{
     font-size: .6em;
-  }
+  }z
   .eachtitle{
     font-size: .6em;
+  }
+  #info{
+    visibility: hidden;
   }
 }
 
@@ -417,5 +416,8 @@
   }
   .eachtitle{
     font-size: .6em;
+  }
+  #info{
+    visibility: hidden;
   }
 }
